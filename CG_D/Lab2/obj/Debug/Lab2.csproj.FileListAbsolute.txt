@@ -10,3 +10,17 @@ C:\Users\Арсюша\source\repos\CG_D\Lab2\obj\Debug\Lab2.csproj.CoreCompileIn
 C:\Users\Арсюша\source\repos\CG_D\Lab2\obj\Debug\Lab2.exe
 C:\Users\Арсюша\source\repos\CG_D\Lab2\obj\Debug\Lab2.pdb
 C:\Users\Арсюша\source\repos\CG_D\Lab2\obj\Debug\Lab2.MenuForm.resources
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\bin\Debug\Lab2.exe.config
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\bin\Debug\Lab2.exe
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\bin\Debug\Lab2.pdb
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.csproj.AssemblyReference.cache
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.exe.config
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form1.resources
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form2.resources
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.MenuForm.resources
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Properties.Resources.resources
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.csproj.GenerateResource.cache
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.exe
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.pdb
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form3.resources
