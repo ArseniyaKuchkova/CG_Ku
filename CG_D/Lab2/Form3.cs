@@ -376,6 +376,12 @@ namespace Lab2
             }
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormBresenham formBresenham = new FormBresenham();
+            formBresenham.ShowDialog();
+        }
+
         private void buttonDrawLine_Click(object sender, EventArgs e)
         {
             // Проверяем, выбран ли алгоритм ЦДА
