@@ -49,6 +49,7 @@
             this.labelDashStep = new System.Windows.Forms.Label();
             this.textBoxDashStep = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -58,7 +59,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonBresenham = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -78,18 +79,18 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Location = new System.Drawing.Point(716, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(537, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(830, 714);
+            this.panel1.Size = new System.Drawing.Size(622, 571);
             this.panel1.TabIndex = 0;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(18, 456);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button5.Location = new System.Drawing.Point(14, 365);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(216, 72);
+            this.button5.Size = new System.Drawing.Size(162, 58);
             this.button5.TabIndex = 10;
             this.button5.Text = "Генерация окружности";
             this.button5.UseVisualStyleBackColor = true;
@@ -99,11 +100,11 @@
             // 
             this.groupBox4.Controls.Add(this.radioButtonRecursive);
             this.groupBox4.Controls.Add(this.radioButtonIterative);
-            this.groupBox4.Location = new System.Drawing.Point(6, 139);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox4.Location = new System.Drawing.Point(4, 111);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox4.Size = new System.Drawing.Size(819, 78);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox4.Size = new System.Drawing.Size(614, 62);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Тип заливки";
@@ -111,10 +112,10 @@
             // radioButtonRecursive
             // 
             this.radioButtonRecursive.AutoSize = true;
-            this.radioButtonRecursive.Location = new System.Drawing.Point(10, 33);
-            this.radioButtonRecursive.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButtonRecursive.Location = new System.Drawing.Point(8, 26);
+            this.radioButtonRecursive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonRecursive.Name = "radioButtonRecursive";
-            this.radioButtonRecursive.Size = new System.Drawing.Size(259, 29);
+            this.radioButtonRecursive.Size = new System.Drawing.Size(196, 24);
             this.radioButtonRecursive.TabIndex = 3;
             this.radioButtonRecursive.TabStop = true;
             this.radioButtonRecursive.Text = "Рекурсивная заливка";
@@ -123,10 +124,10 @@
             // radioButtonIterative
             // 
             this.radioButtonIterative.AutoSize = true;
-            this.radioButtonIterative.Location = new System.Drawing.Point(300, 33);
-            this.radioButtonIterative.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButtonIterative.Location = new System.Drawing.Point(225, 26);
+            this.radioButtonIterative.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonIterative.Name = "radioButtonIterative";
-            this.radioButtonIterative.Size = new System.Drawing.Size(282, 29);
+            this.radioButtonIterative.Size = new System.Drawing.Size(218, 24);
             this.radioButtonIterative.TabIndex = 4;
             this.radioButtonIterative.TabStop = true;
             this.radioButtonIterative.Text = "Интерактивная заливка";
@@ -143,21 +144,21 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.textBoxX1);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(358, 228);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Location = new System.Drawing.Point(268, 182);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(470, 122);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(352, 98);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ввод отрезка";
             // 
             // buttonDrawLine
             // 
-            this.buttonDrawLine.Location = new System.Drawing.Point(286, 34);
-            this.buttonDrawLine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonDrawLine.Location = new System.Drawing.Point(214, 27);
+            this.buttonDrawLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonDrawLine.Name = "buttonDrawLine";
-            this.buttonDrawLine.Size = new System.Drawing.Size(164, 36);
+            this.buttonDrawLine.Size = new System.Drawing.Size(123, 29);
             this.buttonDrawLine.TabIndex = 19;
             this.buttonDrawLine.Text = "Нарисовать";
             this.buttonDrawLine.UseVisualStyleBackColor = true;
@@ -165,73 +166,69 @@
             // 
             // textBoxY2
             // 
-            this.textBoxY2.Location = new System.Drawing.Point(186, 72);
-            this.textBoxY2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxY2.Location = new System.Drawing.Point(140, 58);
+            this.textBoxY2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxY2.Name = "textBoxY2";
-            this.textBoxY2.Size = new System.Drawing.Size(73, 31);
+            this.textBoxY2.Size = new System.Drawing.Size(56, 26);
             this.textBoxY2.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(7, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 25);
+            this.label1.Size = new System.Drawing.Size(29, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "X1";
             // 
             // textBoxX2
             // 
-            this.textBoxX2.Location = new System.Drawing.Point(186, 34);
-            this.textBoxX2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxX2.Location = new System.Drawing.Point(140, 27);
+            this.textBoxX2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.Size = new System.Drawing.Size(73, 31);
+            this.textBoxX2.Size = new System.Drawing.Size(56, 26);
             this.textBoxX2.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 72);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(7, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 25);
+            this.label2.Size = new System.Drawing.Size(29, 20);
             this.label2.TabIndex = 12;
             this.label2.Text = "Y1";
             // 
             // textBoxY1
             // 
-            this.textBoxY1.Location = new System.Drawing.Point(52, 72);
-            this.textBoxY1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxY1.Location = new System.Drawing.Point(39, 58);
+            this.textBoxY1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxY1.Name = "textBoxY1";
-            this.textBoxY1.Size = new System.Drawing.Size(73, 31);
+            this.textBoxY1.Size = new System.Drawing.Size(56, 26);
             this.textBoxY1.TabIndex = 16;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(142, 34);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(106, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 25);
+            this.label3.Size = new System.Drawing.Size(29, 20);
             this.label3.TabIndex = 13;
             this.label3.Text = "X2";
             // 
             // textBoxX1
             // 
-            this.textBoxX1.Location = new System.Drawing.Point(52, 34);
-            this.textBoxX1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxX1.Location = new System.Drawing.Point(39, 27);
+            this.textBoxX1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.Size = new System.Drawing.Size(73, 31);
+            this.textBoxX1.Size = new System.Drawing.Size(56, 26);
             this.textBoxX1.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(142, 72);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(106, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 25);
+            this.label4.Size = new System.Drawing.Size(29, 20);
             this.label4.TabIndex = 14;
             this.label4.Text = "Y2";
             // 
@@ -241,11 +238,11 @@
             this.groupBox2.Controls.Add(this.radioButtonDashed);
             this.groupBox2.Controls.Add(this.labelDashStep);
             this.groupBox2.Controls.Add(this.textBoxDashStep);
-            this.groupBox2.Location = new System.Drawing.Point(6, 227);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Location = new System.Drawing.Point(4, 182);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(346, 123);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(260, 98);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Стиль линии";
@@ -254,10 +251,10 @@
             // 
             this.radioButtonSolid.AutoSize = true;
             this.radioButtonSolid.Checked = true;
-            this.radioButtonSolid.Location = new System.Drawing.Point(10, 28);
-            this.radioButtonSolid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButtonSolid.Location = new System.Drawing.Point(8, 22);
+            this.radioButtonSolid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonSolid.Name = "radioButtonSolid";
-            this.radioButtonSolid.Size = new System.Drawing.Size(146, 29);
+            this.radioButtonSolid.Size = new System.Drawing.Size(113, 24);
             this.radioButtonSolid.TabIndex = 7;
             this.radioButtonSolid.TabStop = true;
             this.radioButtonSolid.Text = "Сплошная";
@@ -267,10 +264,10 @@
             // radioButtonDashed
             // 
             this.radioButtonDashed.AutoSize = true;
-            this.radioButtonDashed.Location = new System.Drawing.Point(10, 70);
-            this.radioButtonDashed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButtonDashed.Location = new System.Drawing.Point(8, 56);
+            this.radioButtonDashed.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonDashed.Name = "radioButtonDashed";
-            this.radioButtonDashed.Size = new System.Drawing.Size(161, 29);
+            this.radioButtonDashed.Size = new System.Drawing.Size(124, 24);
             this.radioButtonDashed.TabIndex = 8;
             this.radioButtonDashed.TabStop = true;
             this.radioButtonDashed.Text = "Пунктирная";
@@ -280,45 +277,58 @@
             // labelDashStep
             // 
             this.labelDashStep.AutoSize = true;
-            this.labelDashStep.Location = new System.Drawing.Point(189, 31);
-            this.labelDashStep.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDashStep.Location = new System.Drawing.Point(142, 25);
             this.labelDashStep.Name = "labelDashStep";
-            this.labelDashStep.Size = new System.Drawing.Size(160, 25);
+            this.labelDashStep.Size = new System.Drawing.Size(119, 20);
             this.labelDashStep.TabIndex = 9;
             this.labelDashStep.Text = "Шаг  пунктира:";
             // 
             // textBoxDashStep
             // 
-            this.textBoxDashStep.Location = new System.Drawing.Point(194, 73);
-            this.textBoxDashStep.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxDashStep.Location = new System.Drawing.Point(146, 58);
+            this.textBoxDashStep.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxDashStep.Name = "textBoxDashStep";
-            this.textBoxDashStep.Size = new System.Drawing.Size(58, 31);
+            this.textBoxDashStep.Size = new System.Drawing.Size(44, 26);
             this.textBoxDashStep.TabIndex = 10;
             this.textBoxDashStep.Text = "5";
             this.textBoxDashStep.TextChanged += new System.EventHandler(this.textBoxDashStep_TextChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButtonBresenham);
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(6, 20);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Location = new System.Drawing.Point(4, 16);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(824, 117);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(618, 94);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Выбирете алгоритм";
             // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(202, 26);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(354, 24);
+            this.radioButton3.TabIndex = 3;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Двумерный алгоритм Коэна - Сазерленда";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(270, 77);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkBox1.Location = new System.Drawing.Point(425, 56);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(190, 29);
+            this.checkBox1.Size = new System.Drawing.Size(148, 24);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Толстая линия";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -327,10 +337,10 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(10, 77);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton2.Location = new System.Drawing.Point(8, 62);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(126, 29);
+            this.radioButton2.Size = new System.Drawing.Size(99, 24);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "Заливка";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -338,20 +348,21 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(10, 34);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton1.Location = new System.Drawing.Point(8, 27);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(188, 29);
+            this.radioButton1.Size = new System.Drawing.Size(143, 24);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.Text = "Обычный ЦДА";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(16, 538);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Location = new System.Drawing.Point(12, 430);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(218, 36);
+            this.button3.Size = new System.Drawing.Size(164, 29);
             this.button3.TabIndex = 5;
             this.button3.Text = "Цвет линии";
             this.button3.UseVisualStyleBackColor = true;
@@ -359,10 +370,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(618, 664);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(464, 531);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 36);
+            this.button1.Size = new System.Drawing.Size(100, 29);
             this.button1.TabIndex = 3;
             this.button1.Text = "Очистить";
             this.button1.UseVisualStyleBackColor = true;
@@ -370,10 +381,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(18, 664);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(14, 531);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(216, 36);
+            this.button2.Size = new System.Drawing.Size(162, 29);
             this.button2.TabIndex = 4;
             this.button2.Text = "Выполнить";
             this.button2.UseVisualStyleBackColor = true;
@@ -381,10 +392,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(16, 584);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button4.Location = new System.Drawing.Point(12, 467);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(218, 36);
+            this.button4.Size = new System.Drawing.Size(164, 29);
             this.button4.TabIndex = 6;
             this.button4.Text = "Цвет заливки";
             this.button4.UseVisualStyleBackColor = true;
@@ -393,33 +404,34 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(712, 709);
+            this.pictureBox1.Size = new System.Drawing.Size(534, 567);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
-            // radioButton3
+            // radioButtonBresenham
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(270, 32);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(466, 29);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Двумерный алгоритм Коэна - Сазерленда";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonBresenham.AutoSize = true;
+            this.radioButtonBresenham.Location = new System.Drawing.Point(202, 56);
+            this.radioButtonBresenham.Name = "radioButtonBresenham";
+            this.radioButtonBresenham.Size = new System.Drawing.Size(204, 24);
+            this.radioButtonBresenham.TabIndex = 4;
+            this.radioButtonBresenham.TabStop = true;
+            this.radioButtonBresenham.Text = "Алгоритм Брезенхема";
+            this.radioButtonBresenham.UseVisualStyleBackColor = true;
+            this.radioButtonBresenham.CheckedChanged += new System.EventHandler(this.radioButtonBresenham_CheckedChanged);
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1544, 714);
+            this.ClientSize = new System.Drawing.Size(1158, 571);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form3";
             this.Text = "Растровые алгоритмы";
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -470,5 +482,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButtonBresenham;
     }
 }

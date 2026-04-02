@@ -28,6 +28,7 @@ namespace Lab2
         bool isDashed = false;  // флаг пунктирной линии
         int dashStep = 5;       // шаг пунктира
         int lineThickness = 1;  // толщина линии
+        bool useBresenham = false;
 
         public Form3()
         {
@@ -123,6 +124,11 @@ namespace Lab2
                 xn = e.X;
                 yn = e.Y;  
             }
+            else if (radioButtonBresenham.Checked == true)  // 🔹 ДОБАВЛЕНО
+            {
+                xn = e.X;
+                yn = e.Y;
+            }
             else
             {
                 MessageBox.Show("Вы не выбрали алгоритм вывода фигуры!");
@@ -203,7 +209,24 @@ namespace Lab2
 
                 }
             }
+            else if (radioButtonBresenham.Checked == true)  // 🔹 НОВЫЙ БЛОК
+            {
+                if (myBitmap == null)
+                {
+                    myBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                    using (Graphics g = Graphics.FromImage(myBitmap))
+                    {
+                        g.Clear(Color.White);
+                    }
+                    pictureBox1.Image = myBitmap;
+                }
 
+                xk = e.X;
+                yk = e.Y;
+                DrawBresenham(xn, yn, xk, yk);
+                pictureBox1.Image = myBitmap;
+                pictureBox1.Refresh();
+            }
             else if (radioButton2.Checked == true)
             {
                 if (currentBorderColor == Color.Empty)
@@ -309,6 +332,7 @@ namespace Lab2
             //отключаем кнопки
             button1.Enabled = false;
             button2.Enabled = false;
+            
 
             //создаем новый экземпляр Bitmap размером с элемент
             //pictureBox1 (myBitmap)
@@ -328,6 +352,16 @@ namespace Lab2
                     CDA(150, 10, 150, 200);
                     CDA(250, 50, 150, 200);
                     CDA(150, 10, 250, 150);
+                }
+                else if (radioButtonBresenham.Checked == true)  // 🔹 АЛГОРИТМ БРЕЗЕНХЕМА
+                {
+                    DrawBresenham(10, 10, 10, 110);
+                    DrawBresenham(10, 10, 110, 10);
+                    DrawBresenham(10, 110, 110, 110);
+                    DrawBresenham(110, 10, 110, 110);
+                    DrawBresenham(150, 10, 150, 200);
+                    DrawBresenham(150, 200, 250, 50);
+                    DrawBresenham(250, 50, 150, 10);
                 }
                 else if (radioButton2.Checked == true)  // Заливка
                 {
@@ -357,8 +391,8 @@ namespace Lab2
             pictureBox1.Refresh();
             button1.Enabled = true;
             button2.Enabled = true;
+        
 
-            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -522,6 +556,16 @@ namespace Lab2
 
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonDrawLine_Click(object sender, EventArgs e)
         {
             // Проверяем, выбран ли алгоритм ЦДА
@@ -621,6 +665,11 @@ namespace Lab2
             }
         }
 
+        private void radioButtonBresenham_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void textBoxDashStep_TextChanged(object sender, EventArgs e)
         {
             try
@@ -642,5 +691,83 @@ namespace Lab2
                 textBoxDashStep.Text = dashStep.ToString();
             }
         }
+
+        private void DrawBresenhamPixel(int x, int y)
+        {
+            if (myBitmap == null) return;
+            if (x < 0 || x >= myBitmap.Width || y < 0 || y >= myBitmap.Height) return;
+
+            if (thickLine)
+            {
+                for (int dx = -1; dx <= 1; dx++)
+                {
+                    for (int dy = -1; dy <= 1; dy++)
+                    {
+                        int drawX = x + dx;
+                        int drawY = y + dy;
+                        if (drawX >= 0 && drawX < myBitmap.Width &&
+                            drawY >= 0 && drawY < myBitmap.Height)
+                        {
+                            myBitmap.SetPixel(drawX, drawY, currentBorderColor);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                myBitmap.SetPixel(x, y, currentBorderColor);
+            }
+        }
+
+        private void DrawBresenham(int x0, int y0, int x1, int y1)
+        {
+            int dx = x1 - x0;
+            int dy = y1 - y0;
+            int sx = (x0 < x1) ? 1 : -1;
+            int sy = (y0 < y1) ? 1 : -1;
+            dx = Math.Abs(dx);
+            dy = Math.Abs(dy);
+            bool steep = dy > dx;
+
+            if (steep)
+            {
+                int temp = dx;
+                dx = dy;
+                dy = temp;
+            }
+
+            int error = 2 * dy - dx;
+            DrawBresenhamPixel(x0, y0);
+
+            int x = x0;
+            int y = y0;
+            for (int i = 0; i < dx; i++)
+            {
+                if (steep)
+                {
+                    if (error > 0)
+                    {
+                        x += sx;
+                        error -= 2 * dx;
+                    }
+                    y += sy;
+                    error += 2 * dy;
+                }
+                else
+                {
+                    if (error > 0)
+                    {
+                        y += sy;
+                        error -= 2 * dx;
+                    }
+                    x += sx;
+                    error += 2 * dy;
+                }
+                DrawBresenhamPixel(x, y);
+            }
+        }
+
+
+
     }
 }
