@@ -33,6 +33,76 @@ namespace Lab2
         {
             InitializeComponent();
         }
+        // Отсечение Коэна-Сазерленда
+        private bool ClipLine(ref double x1, ref double y1, ref double x2, ref double y2,
+                             double xmin, double ymin, double xmax, double ymax)
+        {
+            const int INSIDE = 0b0000;
+            const int LEFT = 0b0001;   
+            const int RIGHT = 0b0010;   
+            const int BOTTOM = 0b0100;
+            const int TOP = 0b1000;   
+
+            // Локальная функция вычисления кода точки
+            int ComputeCode(double x, double y)
+            {
+                int code = INSIDE;
+                if (x < xmin) code |= LEFT;
+                else if (x > xmax) code |= RIGHT;
+                if (y < ymin) code |= BOTTOM;
+                else if (y > ymax) code |= TOP;
+                return code;
+            }
+
+            int code1 = ComputeCode(x1, y1);
+            int code2 = ComputeCode(x2, y2);
+
+            while (true)
+            {
+                if ((code1 | code2) == INSIDE)  // оба внутри
+                    return true;
+                if ((code1 & code2) != 0)       // оба снаружи с одной стороны
+                    return false;
+
+                // Выбираем внешнюю точку
+                int codeOut = (code1 != 0) ? code1 : code2;
+                double x = 0, y = 0;
+
+                // Определяем пересечение с границей
+                if ((codeOut & LEFT) != 0)
+                {
+                    y = y1 + (y2 - y1) * (xmin - x1) / (x2 - x1);
+                    x = xmin;
+                }
+                else if ((codeOut & RIGHT) != 0)
+                {
+                    y = y1 + (y2 - y1) * (xmax - x1) / (x2 - x1);
+                    x = xmax;
+                }
+                else if ((codeOut & BOTTOM) != 0)
+                {
+                    x = x1 + (x2 - x1) * (ymin - y1) / (y2 - y1);
+                    y = ymin;
+                }
+                else if ((codeOut & TOP) != 0)
+                {
+                    x = x1 + (x2 - x1) * (ymax - y1) / (y2 - y1);
+                    y = ymax;
+                }
+
+                // Заменяем точку
+                if (codeOut == code1)
+                {
+                    x1 = x; y1 = y;
+                    code1 = ComputeCode(x1, y1);
+                }
+                else
+                {
+                    x2 = x; y2 = y;
+                    code2 = ComputeCode(x2, y2);
+                }
+            }
+        }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -48,6 +118,11 @@ namespace Lab2
                 xn = e.X;
                 yn = e.Y;  // Запоминаем координаты для заливки
             }
+            else if (radioButton3.Checked == true)
+            {
+                xn = e.X;
+                yn = e.Y;  
+            }
             else
             {
                 MessageBox.Show("Вы не выбрали алгоритм вывода фигуры!");
@@ -56,7 +131,7 @@ namespace Lab2
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            if (radioButton1.Checked == true) 
+            if (radioButton1.Checked == true)
             {
                 //numberNodes – переменная, задающая количество узлов для
                 //аппроксимации отрезка
@@ -153,7 +228,66 @@ namespace Lab2
                 FloodFill(xn, yn);
                 pictureBox1.Refresh();
             }
+
+            else if (radioButton3.Checked == true)
+            {
+                double winLeft = 10;    
+                double winBottom = 100;
+                double winRight = 300;
+                double winTop = 300;
+                double x1 = xn;
+                double y1 = yn;
+                double x2 = e.X;
+                double y2 = e.Y;
+
+                bool visible = ClipLine(ref x1, ref y1, ref x2, ref y2,
+                                winLeft, winBottom, winRight, winTop);
+                if (!visible) return;
+                
+                xn = (int)x1;
+                yn = (int)y1;
+                xk = (int)x2;
+                yk = (int)y2;
+
+                int index, numberNodes;
+                double xOutput, yOutput, dx, dy;
+
+                //Объявляем объект "myPen", задающий цвет и толщину пера
+                Pen myPen = new Pen(currentBorderColor, 1);
+
+                //Объявляем объект "g" класса Graphics и предоставляем
+                //ему возможность рисования на pictureBox1:
+                Graphics g = Graphics.FromHwnd(pictureBox1.Handle);
+                Pen windowPen = new Pen(Color.Blue, 2);  // цвет и толщина рамки
+                g.DrawRectangle(windowPen,
+                                (int)winLeft, (int)winBottom,
+                                (int)(winRight - winLeft), (int)(winTop - winBottom));
+                windowPen.Dispose();
+
+                //реализация обычного алгоритма ЦДА
+                
+
+                dx = xk - xn;
+                dy = yk - yn;
+                numberNodes = 200;
+                xOutput = xn;
+                yOutput = yn;
+
+                for (index = 1; index <= numberNodes; index++)
+                {
+                    int centerX = (int)xOutput;
+                    int centerY = (int)yOutput;
+
+                    g.DrawRectangle(myPen, centerX, centerY, 2, 2);
+                    
+                    xOutput = xOutput + dx / numberNodes;
+                    yOutput = yOutput + dy / numberNodes;
+
+                }
+            }
+
         }
+        
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -240,6 +374,7 @@ namespace Lab2
         {
             pictureBox1.Image = null;
         }
+
 
         private void CDA(int xStart, int yStart, int xEnd, int yEnd)
         {
@@ -380,6 +515,11 @@ namespace Lab2
         {
             FormBresenham formBresenham = new FormBresenham();
             formBresenham.ShowDialog();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void buttonDrawLine_Click(object sender, EventArgs e)
