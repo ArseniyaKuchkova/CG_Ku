@@ -67,13 +67,13 @@ namespace Lab2
             }
         }
 
-        // КНОПКА "ОЧИСТИТЬ" (button2)
+        // КНОПКА "ОЧИСТИТЬ"
         private void button2_Click(object sender, EventArgs e)
         {
             CreateWhiteBitmap();
         }
 
-        // КНОПКА "НАЗАД" (button3)
+        // КНОПКА "НАЗАД" 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -94,11 +94,19 @@ namespace Lab2
             }
         }
 
-        // ПУСТЫЕ ОБРАБОТЧИКИ (для ошибок из дизайнера)
-        private void pictureBox1_Click(object sender, EventArgs e) { }
-        private void pictureBox1_Click_1(object sender, EventArgs e) { }
-        private void FormBresenham_MouseDown(object sender, MouseEventArgs e) { }
-
+        // ПУСТЫЕ ОБРАБОТЧИКИ 
+        private void pictureBox1_Click(object sender, EventArgs e) 
+        {
+        
+        }
+        private void pictureBox1_Click_1(object sender, EventArgs e) 
+        {
+        
+        }
+        private void FormBresenham_MouseDown(object sender, MouseEventArgs e) 
+        {
+        
+        }
         private void pictureBox1_Click_2(object sender, EventArgs e)
         {
 
