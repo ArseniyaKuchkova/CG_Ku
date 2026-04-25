@@ -44,5 +44,16 @@ namespace Lab2
             // Когда лабораторная закроется, снова показываем меню
             this.Show();
         }
+
+        private void heartButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Form5 form5 = new Form5();
+            form5.ShowDialog(); // или Show() — зависит от логики
+
+            // Когда лабораторная закроется, снова показываем меню
+            this.Show();
+        }
     }
 }
