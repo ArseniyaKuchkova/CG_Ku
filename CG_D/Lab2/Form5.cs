@@ -338,6 +338,11 @@ namespace Lab2
             Form6 form6 = new Form6();
             form6.ShowDialog();
         }
+        private void btnSpaceship_Click(object sender, EventArgs e)
+        {
+            Form7 form7 = new Form7();
+            form7.ShowDialog();
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {

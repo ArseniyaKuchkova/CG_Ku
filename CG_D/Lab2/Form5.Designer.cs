@@ -57,6 +57,7 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.button12 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.btnSpaceship = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -330,11 +331,22 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // btnSpaceship
+            // 
+            this.btnSpaceship.Location = new System.Drawing.Point(764, 249);
+            this.btnSpaceship.Name = "btnSpaceship";
+            this.btnSpaceship.Size = new System.Drawing.Size(97, 49);
+            this.btnSpaceship.TabIndex = 56;
+            this.btnSpaceship.Text = "Корабли";
+            this.btnSpaceship.UseVisualStyleBackColor = true;
+            this.btnSpaceship.Click += new System.EventHandler(this.btnSpaceship_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1075, 525);
+            this.Controls.Add(this.btnSpaceship);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
@@ -400,5 +412,6 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSpaceship;
     }
 }
