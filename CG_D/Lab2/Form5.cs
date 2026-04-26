@@ -356,5 +356,11 @@ namespace Lab2
         private void label3_Click(object sender, EventArgs e) { }
         private void label2_Click(object sender, EventArgs e) { }
         private void Form5_Load(object sender, EventArgs e) { }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            Form8 form8 = new Form8();
+            form8.ShowDialog();
+        }
     }
 }
