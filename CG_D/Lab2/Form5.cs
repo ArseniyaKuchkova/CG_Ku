@@ -50,31 +50,43 @@ namespace Lab2
         // создание матрицы
         void BuildMatrix()
         {
+            // единичная
+            float[,] m = {
+                {1,0,0},
+                {0,1,0},
+                {0,0,1}
+            };
+
+            // отражение
             float[,] refl = {
                 {reflectX,0,0},
                 {0,reflectY,0},
                 {0,0,1}
             };
 
+            // масштаб
             float[,] sc = {
                 {scale,0,0},
                 {0,scale,0},
                 {0,0,1}
             };
 
+            // поворот
             float[,] rot = {
                 {(float)Math.Cos(angle),(float)Math.Sin(angle),0},
                 {-(float)Math.Sin(angle),(float)Math.Cos(angle),0},
                 {0,0,1}
             };
 
+            // сдвиг
             float[,] tr = {
                 {1,0,0},
                 {0,1,0},
                 {dx,dy,1}
             };
 
-            matr = Multiply(refl, sc);
+            matr = Multiply(m, refl);
+            matr = Multiply(matr, sc);
             matr = Multiply(matr, rot);
             matr = Multiply(matr, tr);
         }
@@ -327,17 +339,17 @@ namespace Lab2
             form6.ShowDialog();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            dx += 2;
+            DrawAll();
+        }
+
         // ПУСТЫЕ
         private void pictureBox1_Click(object sender, EventArgs e) { }
         private void label1_Click(object sender, EventArgs e) { }
         private void label3_Click(object sender, EventArgs e) { }
         private void label2_Click(object sender, EventArgs e) { }
         private void Form5_Load(object sender, EventArgs e) { }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            dx += 2;
-            DrawAll();
-        }
     }
 }

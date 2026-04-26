@@ -39,6 +39,7 @@ namespace Lab2
             timer.Interval = 30;
             timer.Tick += timer1_Tick;
         }
+
         //МАТРИЦА
         float[,] Multiply(float[,] a, float[,] b)
         {
@@ -51,22 +52,31 @@ namespace Lab2
 
             return r;
         }
-
         void BuildMatrix(float angle, float scale)
         {
+            // единичная
+            float[,] m = {
+                    {1,0,0},
+                    {0,1,0},
+                    {0,0,1}
+            };
+
+            // масштаб
             float[,] sc = {
-                {scale, 0, 0},
-                {0, scale, 0},
-                {0, 0, 1}
+                    {scale,0,0},
+                    {0,scale,0},
+                    {0,0,1}
             };
 
+            // поворот
             float[,] rot = {
-                {(float)Math.Cos(angle), (float)Math.Sin(angle), 0},
-                {-(float)Math.Sin(angle), (float)Math.Cos(angle), 0},
-                {0, 0, 1}
+            {(float)Math.Cos(angle),(float)Math.Sin(angle),0},
+            {-(float)Math.Sin(angle),(float)Math.Cos(angle),0},
+            {0,0,1}
             };
 
-            matr = Multiply(sc, rot);
+            matr = Multiply(m, sc);
+            matr = Multiply(matr, rot);
         }
 
         PointF Transform(PointF p)
@@ -112,7 +122,6 @@ namespace Lab2
 
             g.Dispose();
         }
-        // ================= КНОПКИ =================
 
         // НАРИСОВАТЬ
         private void button1_Click(object sender, EventArgs e)
@@ -180,10 +189,6 @@ namespace Lab2
         // ОЧИСТИТЬ 
         private void button3_Click(object sender, EventArgs e)
         {
-            timer.Stop();
-            isRunning = false;
-            button5.Text = "Старт";
-
             Graphics g = pictureBox1.CreateGraphics();
             g.Clear(Color.White);
             g.Dispose();
@@ -210,10 +215,11 @@ namespace Lab2
 
             isRunning = !isRunning;
         }
+
         // НАЗАД
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
