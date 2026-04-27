@@ -362,5 +362,11 @@ namespace Lab2
             Form8 form8 = new Form8();
             form8.ShowDialog();
         }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            Form9 form9 = new Form9();
+            form9.ShowDialog();
+        }
     }
 }
