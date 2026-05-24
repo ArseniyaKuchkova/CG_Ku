@@ -171,3 +171,28 @@ D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\La
 D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form14.resources
 D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form8.resources
 D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form9.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\bin\Debug\Lab2.exe.config
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\bin\Debug\Lab2.exe
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\bin\Debug\Lab2.pdb
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.csproj.AssemblyReference.cache
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.exe.config
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form1.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form10.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form11.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form12.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form13.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form14.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form2.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form3.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.FormBresenham.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form5.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form6.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form7.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form8.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Form9.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.MenuForm.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.Properties.Resources.resources
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.csproj.GenerateResource.cache
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.exe
+C:\Users\Арсюша\source\repos\CG_KuF\CG_D\Lab2\obj\Debug\Lab2.pdb
