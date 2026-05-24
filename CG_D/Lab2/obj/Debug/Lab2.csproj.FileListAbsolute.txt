@@ -159,3 +159,9 @@ C:\Users\user\Desktop\sss\CG_D\Lab2\obj\Debug\Lab2.pdb
 C:\Users\Арсюша\source\repos\CG\CG_D\Lab2\obj\Debug\Lab2.Form10.resources
 C:\Users\Арсюша\source\repos\CG\CG_D\Lab2\obj\Debug\Lab2.Form11.resources
 C:\Users\Арсюша\source\repos\CG\CG_D\Lab2\obj\Debug\Lab2.Form9.resources
+C:\Users\user\Desktop\laba3\CG_D\Lab2\obj\Debug\Lab2.Form10.resources
+C:\Users\user\Desktop\laba3\CG_D\Lab2\obj\Debug\Lab2.Form11.resources
+C:\Users\user\Desktop\laba3\CG_D\Lab2\obj\Debug\Lab2.Form7.resources
+C:\Users\user\Desktop\laba3\CG_D\Lab2\obj\Debug\Lab2.Form8.resources
+C:\Users\user\Desktop\laba3\CG_D\Lab2\obj\Debug\Lab2.Form9.resources
+C:\Users\user\Desktop\laba3\CG_D\Lab2\obj\Debug\Lab2.Form12.resources
