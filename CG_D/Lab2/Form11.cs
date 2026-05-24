@@ -33,5 +33,11 @@ namespace Lab2
             Form13 form13 = new Form13();
             form13.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form14 form14 = new Form14();
+            form14.ShowDialog();
+        }
     }
 }

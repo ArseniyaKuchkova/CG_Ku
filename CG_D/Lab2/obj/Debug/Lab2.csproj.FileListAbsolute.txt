@@ -165,3 +165,9 @@ C:\Users\user\Desktop\laba3\CG_D\Lab2\obj\Debug\Lab2.Form7.resources
 C:\Users\user\Desktop\laba3\CG_D\Lab2\obj\Debug\Lab2.Form8.resources
 C:\Users\user\Desktop\laba3\CG_D\Lab2\obj\Debug\Lab2.Form9.resources
 C:\Users\user\Desktop\laba3\CG_D\Lab2\obj\Debug\Lab2.Form12.resources
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form10.resources
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form11.resources
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form12.resources
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form14.resources
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form8.resources
+D:\tusur\Компьютерная графика\Лабы\CG_D\Lab2\obj\Debug\Lab2.Form9.resources
