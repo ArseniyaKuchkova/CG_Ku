@@ -45,5 +45,11 @@ namespace Lab2
             Form15 form15 = new Form15();
             form15.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form10 form10 = new Form10();
+            form10.ShowDialog();
+        }
     }
 }
